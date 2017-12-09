@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    tools:context="com.example.iiday.calcapp.MainActivity"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="＋"
+        android:id="@+id/button_tasu"
+        android:layout_alignBaseline="@+id/button_waru"
+        android:layout_alignBottom="@+id/button_waru"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ー"
+        android:id="@+id/button_hiku"
+        android:layout_alignBaseline="@+id/button_tasu"
+        android:layout_alignBottom="@+id/button_tasu"
+        android:layout_toEndOf="@+id/button_tasu" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="＊"
+        android:id="@+id/button_kakeru"
+        android:layout_alignBaseline="@+id/button_hiku"
+        android:layout_alignBottom="@+id/button_hiku"
+        android:layout_toEndOf="@+id/button_hiku" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="／"
+        android:id="@+id/button_waru"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/edit_value2"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:id="@+id/edit_value1"
+        android:layout_toEndOf="@+id/edit_value2"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:id="@+id/edit_value2"
+        android:layout_below="@+id/edit_value1"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>
