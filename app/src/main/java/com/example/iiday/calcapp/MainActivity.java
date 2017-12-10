@@ -3,6 +3,7 @@ package com.example.iiday.calcapp;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.InputType;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -22,7 +23,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button button_kake = (Button)findViewById(R.id.button_kakeru);
         Button button_waru = (Button)findViewById(R.id.button_waru);
         m_edittext1 = (EditText)findViewById(R.id.edit_value1);
+        m_edittext1.setInputType(InputType.TYPE_CLASS_NUMBER);
         m_edittext2 = (EditText)findViewById(R.id.edit_value2);
+        m_edittext2.setInputType(InputType.TYPE_CLASS_NUMBER);
 
         button_tasu.setOnClickListener(this);
         button_hiku.setOnClickListener(this);
@@ -48,8 +51,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             enzan = 3;
         }
         intent.putExtra("ENZAN", enzan);
-        intent.putExtra("VALUE1", Double.valueOf(m_edittext1.getText().toString()));
-        intent.putExtra("VALUE2", Double.valueOf(m_edittext2.getText().toString()));
+
+        if(m_edittext1.getText().toString().length() == 0){
+            intent.putExtra("VALUE1", 0);
+        }
+        else{
+            intent.putExtra("VALUE1", Double.valueOf(m_edittext1.getText().toString()));
+        }
+        if(m_edittext2.getText().toString().length() == 0){
+            intent.putExtra("VALUE2", 0);
+        }
+        else{
+            intent.putExtra("VALUE2", Double.valueOf(m_edittext2.getText().toString()));
+        }
         startActivity(intent);
     }
 
