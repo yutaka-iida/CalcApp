@@ -23,9 +23,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button button_kake = (Button)findViewById(R.id.button_kakeru);
         Button button_waru = (Button)findViewById(R.id.button_waru);
         m_edittext1 = (EditText)findViewById(R.id.edit_value1);
-        m_edittext1.setInputType(InputType.TYPE_CLASS_NUMBER);
+        m_edittext1.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL | InputType.TYPE_NUMBER_FLAG_SIGNED);
         m_edittext2 = (EditText)findViewById(R.id.edit_value2);
-        m_edittext2.setInputType(InputType.TYPE_CLASS_NUMBER);
+        m_edittext2.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL | InputType.TYPE_NUMBER_FLAG_SIGNED);
 
         button_tasu.setOnClickListener(this);
         button_hiku.setOnClickListener(this);
